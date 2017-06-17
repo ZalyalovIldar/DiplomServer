@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <% if @applications.empty? %>
+    Пока приложений нету =(
+  <% else %>
+      <thead>
+      <tr>
+        <th>Приложения</th>
+
+      </tr>
+      </thead>
+      <tbody>
+    <% @applications.each do |app| %>
+        <tr>
+          <td><%= link_to app.name,application_path(app) %></td>
+        </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+

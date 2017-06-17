@@ -1,0 +1,10 @@
+<div class="login_form">
+
+  <%= form_tag sessions_path do %>
+      <%= text_field_tag :login %>
+      <%= password_field_tag :password %>
+      <%= submit_tag 'Войти' %>
+  <% end %>
+  <%= link_to 'Зарегистрироватся', new_user_path %>
+
+</div>

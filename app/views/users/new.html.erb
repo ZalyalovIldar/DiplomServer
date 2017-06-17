@@ -1,0 +1,19 @@
+
+<% @user.errors.messages.each do |k,v| %>
+  <%= k %>: <%= v%> <br>
+<% end %>
+<div class="login_form">
+
+  <%= form_for @user do |f| %>
+      <%= f.label :login %>
+      <%= f.text_field :login %>
+      <%= f.label :password  %>
+      <%= f.password_field :password %>
+
+      <%= submit_tag 'Зарегистрироватся' %>
+
+  <% end %>
+
+</div>
+
+

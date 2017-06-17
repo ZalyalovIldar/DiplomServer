@@ -1,0 +1,19 @@
+<table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Приложение: '<%= @app.name %>'</th>
+      </tr>
+      <% unless @app.description.nil? %>
+      <tr>
+        <th>Описание: '<%= @app.description %>'</th>
+      </tr>
+          <% end %>
+      </thead>
+      <tbody>
+      <% @app.testers.each do |app| %>
+          <tr>
+            <td><%= link_to app.name,tester_path(app) %></td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>

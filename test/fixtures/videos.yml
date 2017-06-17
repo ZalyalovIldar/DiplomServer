@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tester_id: 1
+  video_path: MyString
+  application_id: 1
+
+two:
+  tester_id: 1
+  video_path: MyString
+  application_id: 1

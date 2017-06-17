@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails diplom_server: development" uuid="0db8016f-391a-411c-b2c4-0e95df9e323d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:diplom_server_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails diplom_server: production" uuid="f4d2a439-27e1-40b0-8bfc-1686874ccac8">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:diplom_server_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails diplom_server: test" uuid="0a540448-814b-4d84-b052-6bf09e595044">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:diplom_server_test</jdbc-url>
+    </data-source>
+  </component>
+</project>

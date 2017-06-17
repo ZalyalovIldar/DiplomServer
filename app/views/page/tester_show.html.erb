@@ -1,0 +1,64 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Пользователь: '<%= @tester.name %>'</th>
+  </tr>
+  <% unless @tester.descriptions.nil? %>
+      <tr>
+        <th>Описание: '<%= @tester.descriptions %>'</th>
+      </tr>
+  <% end %>
+  <tr>
+    <th>Фото</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+  <% @tester.photos.each do |photo| %>
+          <%= link_to '#modal', 'data-toggle': "modal" do %>
+              <%= image_tag photo_path(photo), class: 'image_preview', 'data-emoji': photo.emojis  %>
+          <% end %>
+  <% end %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Видео</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+  <% @tester.videos.each do |video| %>
+      <%= link_to '#modal', 'data-toggle': "modal" do %>
+        <%= video_tag video_path(video), class: 'video_preview', preload: 'auto', 'data-id': video.id  %>
+        <div style="display: none;" id="video_<%= video.id %>" >
+          <%= video.emojis.to_json %>
+        </div>
+      <% end %>
+  <% end %>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+<div class="modal fade" id="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="image">
+      </div>
+      <div class="video">
+        <%= video_tag '', id: 'video', controls: 'controls' %>
+      </div>
+      <div class="emoji">
+      </div>
+    </div>
+  </div>
+</div>
+

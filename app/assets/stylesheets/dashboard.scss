@@ -1,0 +1,368 @@
+/*
+
+ *= require bootstrap_and_overrides
+ */
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+.add_btn {
+  float: right;
+  margin-right: 60px;
+  margin-top: 15px;
+}
+
+.index_header {
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+/* Breadcrumbs from http://bootsnipp.com/snippets/featured/triangle-breadcrumbs-arrows */
+.btn-breadcrumb .btn:not(:last-child):after {
+  content: ">";
+  display: block;
+  width: 0;
+  height: 0;
+  /*border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid white;*/
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  left: 100%;
+  z-index: 3;
+}
+.btn-breadcrumb .btn:not(:last-child):before {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  /*border-top: 17px solid transparent;
+  border-bottom: 17px solid transparent;
+  border-left: 10px solid rgb(173, 173, 173);*/
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 3;
+}
+
+.btn-breadcrumb .btn {
+  padding:6px 12px 6px 24px;
+}
+.btn-breadcrumb .btn:first-child {
+  padding:6px 10px 6px 10px;
+}
+.btn-breadcrumb .btn:last-child {
+  padding:6px 18px 6px 24px;
+}
+
+/** Default button **/
+.btn-breadcrumb .btn.btn-default:not(:last-child):after {
+  /*border-left: 10px solid #fff;*/
+}
+.btn-breadcrumb .btn.btn-default:not(:last-child):before {
+  /*border-left: 10px solid #ccc;*/
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
+  /*border-left: 10px solid #ebebeb;*/
+}
+.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
+  /*border-left: 10px solid #adadad;*/
+}
+
+/* The responsive part */
+
+.btn-breadcrumb > * > div {
+  /* With less: .text-overflow(); */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-breadcrumb > *:nth-child(n+2) {
+  display:none;
+}
+
+/* === For phones =================================== */
+@media (max-width: 767px) {
+  .btn-breadcrumb > *:nth-last-child(-n+2) {
+    display:block;
+  }
+  .btn-breadcrumb > * div {
+    max-width: 60px;
+  }
+}
+
+/* === For tablets ================================== */
+@media (min-width: 768px) and (max-width:991px) {
+  .btn-breadcrumb > *:nth-last-child(-n+4) {
+    display:block;
+  }
+  .btn-breadcrumb > * div {
+    max-width: 100px;
+  }
+}
+
+/* === For desktops ================================== */
+@media (min-width: 992px) {
+  .btn-breadcrumb > *:nth-last-child(-n+6) {
+    display:block;
+  }
+  .btn-breadcrumb > * div {
+    max-width: 170px;
+  }
+}
+
+img.backend_logo {
+  margin: 20px 0;
+}
+
+.categories_preview {
+  margin-bottom: 30px;
+}
+
+.cat {
+  margin: 0 10px;
+}
+
+.dropdown-menu > li {
+  padding: 5px 0;
+}
+
+.dropdown-menu {
+  min-width: 300px !important;
+}
+
+.index_header span {
+  float: right;
+  margin-right: 50px;
+}
+
+
+/* ===========CUSTOM============= */
+
+.dashboard-menu {
+  margin: 0;
+  padding: 0 20px;
+  li {
+    display: inline-block;
+    width: 30%;
+    margin: 0 5px 30px 0;
+    vertical-align: top;
+    text-align: center;
+    &:nth-child(3n+3){
+      margin-right: 0;
+    }
+    a {
+      color: black;
+    }
+    a:hover {
+      color: #93C54B;
+      text-decoration: none;
+    }
+    span {
+      width: 100%;
+    }
+    span:before {
+      font-size: 30px;
+    }
+  }
+}
+
+table {
+  td {
+    a {
+      color: black;
+    }
+    a:hover {
+      color: #93C54B;
+      text-decoration: none;
+    }
+  }
+}
+
+.page-header {
+  position: relative;
+  margin-top: 20px !important;
+  h1 {
+    display: inline;
+  }
+  a {
+    position: relative;
+    right: 0;
+    bottom: 12px;
+    color: black;
+    span:before {
+      font-size: 23px;
+    }
+  }
+  a:hover {
+    color: #93C54B;
+    text-decoration: none;
+  }
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: asset-url('glyphicons-halflings-regular.eot');
+  src: asset-url('glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), asset-url('glyphicons-halflings-regular.woff2') format('woff2'), asset-url('glyphicons-halflings-regular.woff') format('woff'), asset-url('glyphicons-halflings-regular.ttf') format('truetype'), asset-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-plus:before {
+  content: "\2b";
+}
+.glyphicon-circle-plus:before {
+  content: "\e081";
+}
+
+.glyphicon-edit:before {
+  content: "\e065";
+}
+
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+.action_icon {
+  font-family: 'Glyphicons Halflings';
+  margin-left: 5px;
+}
+.glyphicon-not_active:hover {
+  color: rgb(105, 105, 105);
+}
+.edit:before {
+  content: "\270f";
+}
+
+.remove:before {
+  content: "\e014";
+}
+.file{
+  padding-top: 0px;
+}
+.slide_title {
+
+}
+.slide_image img {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+}
+.table td {
+  border-top: 1px solid;
+  //text-align: center;
+}
+.table th {
+  //border-top: 1px solid;
+  text-align: left;
+}
+
+

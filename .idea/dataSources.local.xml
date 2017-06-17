@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails diplom_server: development" uuid="0db8016f-391a-411c-b2c4-0e95df9e323d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails diplom_server: production" uuid="f4d2a439-27e1-40b0-8bfc-1686874ccac8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>diplom_server</user-name>
+    </data-source>
+    <data-source name="Rails diplom_server: test" uuid="0a540448-814b-4d84-b052-6bf09e595044">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+  </component>
+</project>
